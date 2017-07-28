@@ -1,7 +1,7 @@
 const render = require('../lib/render');
 
-function homePath(req, res) {
-	render('index.html', null, (error, html) => {
+function notFound(req, res) {
+	render('error.html', {error: 'Не найдено'}, (error, html) => {
 		if (error) {
 			res.writeHead(500, { 'Content-Type' : 'text/plain'});
 			return res.end(error.message);
@@ -13,4 +13,4 @@ function homePath(req, res) {
 	});
 }
 
-module.exports = homePath;
+module.exports = notFound;

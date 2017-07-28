@@ -1,7 +1,7 @@
 const publicPath = require('./public');
 const homePath = require('./home');
 const searchPath = require('./search');
-const notFound = require('./norFound');
+const notFound = require('./notFound');
 
 module.exports = {
 	publicPath,
